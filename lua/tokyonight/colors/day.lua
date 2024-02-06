@@ -1,16 +1,34 @@
----@param opts tokyonight.Config
-return function(opts)
-  local style = opts.light_style or "night"
-  style = style == "day" and "night" or style
-
-  local Util = require("tokyonight.util")
-
-  ---@type Palette
-  local colors = vim.deepcopy(Util.mod("tokyonight.colors." .. style))
-
-  ---@type Palette
-
-  Util.invert(colors)
-  colors.bg_dark = Util.blend(colors.bg, 0.9, colors.fg)
-  return colors
-end
+---@class Palette
+local ret = {
+  bg_dark = "#e1e1e9",
+  bg = "#ffffff", -- "#d9dae5"
+  bg_highlight = "#bdc2d6",
+  terminal_black = "#5e6378",
+  fg = "#000000", -- "#0a143f",
+  fg_dark = "#293156",
+  fg_gutter = "#c6cadc",
+  dark3 = "#545c7e",
+  comment = "#4f577d",
+  dark5 = "#5d648c",
+  blue0 = "#c9d3ed",
+  blue = "#083085",
+  cyan = "#0071b3",
+  blue1 = "#1b96ac",
+  blue2 = "#0a91a8",
+  blue5 = "#0098d6",
+  blue6 = "#0c9c9a",
+  blue7 = "#b1bdd7",
+  magenta = "#7d3df0",
+  magenta2 = "#ff007c",
+  purple = "#6135b1",
+  orange = "#cc4c00",
+  yellow = "#ad8200",
+  green = "#349900",
+  green1 = "#27956a",
+  green2 = "#32804d",
+  teal = "#14947b",
+  red = "#e20d35",
+  red1 = "#bf2626",
+  git = { change = "#6183bb", add = "#449dab", delete = "#914c54" },
+}
+return ret
