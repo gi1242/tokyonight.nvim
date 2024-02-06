@@ -1,3 +1,11 @@
+# 🏙 Tokyo Night with Day Colors
+
+This fork of tokyonight fixes the palette for `day`. The original version computed the palette for day by inverting the colors; this works reasonably well, but does badly if you want a very bright background. We fix it by explicitly choosing the palette.
+
+Original readme below.
+
+-----
+
 # 🏙 Tokyo Night
 
 A dark and light [Neovim](https://github.com/neovim/neovim) theme written in
@@ -282,7 +290,6 @@ M.defaults = {
     sidebars = "dark", -- style for sidebars, see below
     floats = "dark", -- style for floating windows
   },
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
   dim_inactive = false, -- dims inactive windows
   lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 

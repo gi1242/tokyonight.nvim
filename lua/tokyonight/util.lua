@@ -2,7 +2,6 @@ local M = {}
 
 M.bg = "#000000"
 M.fg = "#ffffff"
-M.day_brightness = 0.3
 
 local uv = vim.uv or vim.loop
 
